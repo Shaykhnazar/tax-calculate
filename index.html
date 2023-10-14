@@ -62,22 +62,22 @@
 <div id="app">
     <h1>O'tgan oydagi ma'lumotlar asosida bu oydagi qo'shimcha daromadlar bo'limiga qancha summa kiritishni hisoblash</h1>
     <form @submit.prevent="calculateTax">
-        <label for="currentPayedTax">Soliq solinadigan Jami daromad(shu oydagi):</label>
+        <label for="currentPayedTax">Айланмадан олинадиган солиқ суммаси – жами (050-сатр х 0601-сатр)(o'tgan oydagi):</label>
         <input type="number" id="currentPayedTax" v-model="currentPayedTax" required><br>
 
-        <label for="valueToPay">Bu oyda to'lanishi kerak bo'lgan aylanma soliq:</label>
+        <label for="valueToPay">Qancha aylanma soliq to'lamoqchisiz (masalan, 400 000 sum)?</label>
         <input type="number" id="valueToPay" v-model="valueToPay" required><br>
 
-        <label for="NKMCurrentMonth">Kassa aparatdagi shu oydagi kirim:</label>
+        <label for="NKMCurrentMonth">Online назорат касса техникаси орқали шаклланган даромадлар(0102)(shu oydagi):</label>
         <input type="number" id="NKMCurrentMonth" v-model="NKMCurrentMonth" required><br>
 
-        <label for="percent">Soliq solinadigan foiz stavkasi:</label>
+        <label for="percent">Солиқ ставкаси(060), фоизда(2%):</label>
         <input type="number" id="percent" v-model="percent" readonly><br>
 
         <button type="submit">Hisoblash</button>
     </form>
 
-    <p v-if="newIncomeSum !== null">Bu oydagi qo'shimcha daromadlar katagiga quyidagi summani kiriting: {{ newIncomeSum }}</p>
+    <p v-if="newIncomeSum !== null">Bu oydagi Бошқа даромадлар(0105) katagiga quyidagi summani kiriting: {{ newIncomeSum }}</p>
 </div>
 
 <script>
